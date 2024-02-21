@@ -1,18 +1,40 @@
 html {
-    --s: 86px;
-    --a: 60deg;
-    
-    --g:#0000 45%,#79B4B7 46% 54%,#0000 55%;
-    background:
-      linear-gradient(        var(--a), var(--g)),
-      linear-gradient(calc(-1*var(--a)),var(--g))
-      #70a8ab;
-    background-size: var(--s) calc(tan(var(--a))*var(--s))
-  }
+  --s: 86px;
+  --a: 60deg;
 
-  body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100vh;
-  }
+  --g: #0000 45%, #79B4B7 46% 54%, #0000 55%;
+  background:
+    linear-gradient(var(--a), var(--g)),
+    linear-gradient(calc(-1*var(--a)), var(--g)) #70a8ab;
+  background-size: var(--s) calc(tan(var(--a))*var(--s))
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  color: #FEFBF3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin-block-start: 5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 2px #C7CFB7;
+}
+
+form {
+
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  gap: 10px;
+
+  max-width: 400px; 
+  color: black;
+  background-color: #FEFBF3;
+  padding: 1em;
+  border: 1px solid #9D9D9D;
+  margin: 2em auto;
+}

@@ -14,8 +14,8 @@ function renderUserPrefs() {
     elBody.style.backgroundColor = userPrefs.bgColor
 }
 
-function onSetColor(name, color) {
-    setColor(name, color)
+function onFieldFill(name, value) {
+    updateUserPref(name, value)
 }
 
 
