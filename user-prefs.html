@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Keeper</title>
-    <link rel="stylesheet" href="css/user-prefs.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Keeper</title>
+  <link rel="stylesheet" href="css/user-prefs.css" />
 </head>
-<body>
-    <header>
-        <h1>Settings</h1>
-    </header>
-    
+
+<body onload="onInit()">
+  <header>
+    <h1>Settings</h1>
+  </header>
+
+  <label for="color">Text Color:</label>
+  <input type="color" id="color" name="txt-color" value="#fdfff8" onchange="onSetColor(name, value)" />
+
+  <label for="bg-color">Background Color:</label>
+  <input type="color" id="bg-color" name="bg-color" value="#fdfff8" onchange="onSetColor(name, value)" />
+
+  <script src="js/services/storage.service.js"></script>
+  <script src="js/services/user-service.js"></script>
+  <script src="js/user-prefs.controller.js"></script>
 </body>
+
 </html>
