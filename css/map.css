@@ -1,0 +1,11 @@
+html {
+    --s: 86px;
+    --a: 60deg;
+    
+    --g:#0000 45%,#79B4B7 46% 54%,#0000 55%;
+    background:
+      linear-gradient(var(--a), var(--g)),
+      linear-gradient(calc(-1*var(--a)),var(--g))
+      #70a8ab;
+    background-size: var(--s) calc(tan(var(--a))*var(--s))
+  }

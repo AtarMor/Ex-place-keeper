@@ -1,0 +1,37 @@
+html {
+    --s: 86px;
+    --a: 60deg;
+    
+    --g:#0000 45%,#79B4B7 46% 54%,#0000 55%;
+    background:
+      linear-gradient(var(--a), var(--g)),
+      linear-gradient(calc(-1*var(--a)),var(--g))
+      #70a8ab;
+    background-size: var(--s) calc(tan(var(--a))*var(--s))
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    color: #fdfff8;
+    text-shadow: 1px 1px 2px #C7CFB7;
+}
+
+nav {
+    font-size: 1.2rem;
+    color: #fdfff8;
+    margin-block: 1em;
+}
+
+a {
+    color: #fdfff8;
+}
