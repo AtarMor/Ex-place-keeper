@@ -9,3 +9,19 @@ html {
       #70a8ab;
     background-size: var(--s) calc(tan(var(--a))*var(--s))
   }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .map {
+    height: 50%;
+  }
+
+  .places-list {
+    background-color: #accecf;
+    min-width: 300px;
+    height: 50%;
+  }

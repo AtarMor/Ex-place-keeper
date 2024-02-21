@@ -6,11 +6,28 @@
     <title>Place Keeper</title>
     <link rel="stylesheet" href="css/map.css"/>
 </head>
-<body>
-    <header>
-        <h1>Map</h1>
+
+<body onload="onInit()">
+        <header>
+        <h1>Place Keeper</h1>
+        <h2>Find your way back to your best places</h2>
     </header>
-    
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="user-prefs.html">Settings </a>
+    </nav>
+
+    <div class="map"></div>
+    <ul class="places-list">
+        <h3>Places:</h3>
+        <span></span>
+    </ul>
+
+    <script src="js/services/place-service.js"></script>
+    <script src="js/places.controller.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcud0biZWZjSrG8el8zNmJUhMElhBVrUA">
+    </script>
 
     
 </body>
