@@ -30,10 +30,9 @@ header {
 
 nav {
     font-size: 1.2rem;
-    /* color: #fdfff8; */
     margin-block: 1em;
 }
 
 a {
-    color: #fdfff8;
+    color: inherit;
 }

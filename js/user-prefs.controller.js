@@ -5,17 +5,19 @@ function onInit() {
 }
 
 function renderUserPrefs() {
-    const userPrefs = loadFromStorage(USER_DB)
+    const userPrefs = getUserPrefs()
 
     const elBody = document.querySelector('body')
-
-
     elBody.style.color = userPrefs.txtColor
     elBody.style.backgroundColor = userPrefs.bgColor
 }
 
-function onFieldFill(name, value) {
-    updateUserPref(name, value)
+function mySubmit(ev) {
+    ev.preventDefault();
+    updateUserPref()
+    renderUserPrefs()
 }
 
-
+function showAge(newVal) {
+    document.getElementById('sAge').innerHTML = newVal
+}

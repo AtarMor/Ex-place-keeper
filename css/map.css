@@ -1,31 +1,51 @@
 html {
-    --s: 86px;
-    --a: 60deg;
-    
-    --g:#0000 45%,#79B4B7 46% 54%,#0000 55%;
-    background:
-      linear-gradient(var(--a), var(--g)),
-      linear-gradient(calc(-1*var(--a)),var(--g))
-      #70a8ab;
-    background-size: var(--s) calc(tan(var(--a))*var(--s))
-  }
+  --s: 86px;
+  --a: 60deg;
 
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+  --g: #0000 45%, #79B4B7 46% 54%, #0000 55%;
+  background:
+    linear-gradient(var(--a), var(--g)),
+    linear-gradient(calc(-1*var(--a)), var(--g)) #70a8ab;
+  background-size: var(--s) calc(tan(var(--a))*var(--s))
+}
 
-  .map {
-    height: 50%;
-  }
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: arial;
+}
 
-  .places-list {
-    background-color: #accecf;
-    min-width: 300px;
-    height: 50%;
-  }
+body {
+  display: grid;
+  grid-template-columns: minmax(500px, 4fr) minmax(220px, 1fr);
+  grid-template-rows: 150px 50px 1fr
+}
 
-  .places-list h3 {
-  display:inline-block;
-  }
+header {
+  grid-column: 1 / -1;
+  margin-inline-start: 50px;
+
+}
+
+nav {
+  grid-row: 2;
+  margin-inline-start: 50px;
+}
+
+nav a {
+  color: inherit;
+}
+
+.map {
+  height: 100%;
+  grid-row: 3
+
+}
+
+.places-list {
+  grid-area: 3 / 2;
+  height: 100%;
+  margin: 0;
+  background-color: #C7CFB7;
+}

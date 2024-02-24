@@ -2,22 +2,31 @@
 
 const USER_DB = 'userDb'
 
-const user = {
-    email: '',
-    txtColor: '',
-    bgColor: '',
-    birthDate: '',
-    birthTime: ''
-}
+var gUser
 
 function getUserPrefs() {
-    return user
+    gUser = loadFromStorage(USER_DB)
+    if (!gUser && !gUser.length) {
+
+        gUser = {
+            email: '',
+            txtColor: '',
+            bgColor: '',
+            birthDate: '',
+            birthTime: '',
+            age: 26,
+        }
+    }
+    return gUser
 }
 
-function updateUserPref(name, value) {
-    if (name === 'txt-color') user.txtColor = value
-    else if (name === 'bg-color') user.bgColor = value
-    else if (name === 'birth-date') user.birthDate = value
-    else if (name === 'birth-time') user.birthTime = value
-    saveToStorage(USER_DB, user)
+function updateUserPref() {
+    gUser.email = document.getElementById('email').value
+    gUser.txtColor = document.getElementById('color').value
+    gUser.bgColor = document.getElementById('bg-color').value
+    gUser.birthDate = document.getElementById('birth-date').value
+    gUser.birthTime = document.getElementById('birth-time').value
+    gUser.age = document.getElementById('age').value
+
+    saveToStorage(USER_DB, gUser)
 }

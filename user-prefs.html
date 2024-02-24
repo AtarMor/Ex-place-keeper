@@ -12,19 +12,31 @@
   <header>
     <h1>Settings</h1>
   </header>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="map.html">Places</a>
+  </nav>
 
-  <form>
+  <form id="frm" onsubmit="mySubmit(event)">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" />
+
     <label for="color">Text Color:</label>
-    <input type="color" id="color" name="txt-color" value="#fdfff8" onchange="onFieldFill(name, value)" />
+    <input type="color" id="color" name="txt-color" value="#fdfff8" />
 
     <label for="bg-color">Background Color:</label>
-    <input type="color" id="bg-color" name="bg-color" value="#fdfff8" onchange="onFieldFill(name, value)" />
+    <input type="color" id="bg-color" name="bg-color" value="#fdfff8" />
 
     <label for="birth-date">Date of Birth:</label>
-    <input type="date" id="birth-date" name="birth-date" onchange="onFieldFill(name, value)" />
+    <input type="date" id="birth-date" name="birth-date" />
 
     <label for="birth-time">Time of Birth:</label>
-    <input type="time" id="birth-time" name="birth-time" min="00:00" max="24:00" onchange="onFieldFill(name, value)" />
+    <input type="time" id="birth-time" name="birth-time" min="00:00" max="24:00" />
+
+    <label for="age">Age: <span id="sAge">26</span></label>
+    <input type="range" id="age" name="age" step="1" min="18" max="120" value="26" onchange="showAge(this.value)" />
+
+    <button>submit</button>
   </form>
 
   <script src="js/services/storage.service.js"></script>

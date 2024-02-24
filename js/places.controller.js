@@ -4,6 +4,7 @@ var gMap
 var gMarkers = []
 
 function onInit() {
+    renderUserPrefs()
     renderPlaces()
     initMap()
     renderMarkers()
@@ -18,6 +19,14 @@ function renderPlaces() {
                 </li>`
     })
     document.querySelector('.places-list span').innerHTML = strHTMLs.join('')
+}
+
+function renderUserPrefs() {
+    const userPrefs = getUserPrefs()
+
+    const elBody = document.querySelector('body')
+    elBody.style.color = userPrefs.txtColor
+    elBody.style.backgroundColor = userPrefs.bgColor
 }
 
 function onRemovePlace(placeId) {
