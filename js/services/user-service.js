@@ -6,7 +6,7 @@ var gUser
 
 function getUserPrefs() {
     gUser = loadFromStorage(USER_DB)
-    if (!gUser && !gUser.length) {
+    if (!gUser || !gUser.length) {
 
         gUser = {
             email: '',
@@ -14,7 +14,7 @@ function getUserPrefs() {
             bgColor: '',
             birthDate: '',
             birthTime: '',
-            age: 26,
+            age: 18,
         }
     }
     return gUser

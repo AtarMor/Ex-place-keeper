@@ -31,8 +31,8 @@ function _createPlaces() {
     console.log('gPlaces:', gPlaces)
     if (!gPlaces || !gPlaces.length) {
         gPlaces = [
-            _createPlace('Pukis house', 32.1416, 34.831213),
-            _createPlace('house', 32.4416, 34.931213),
+            _createPlace('Wanaka', -44.703182, 169.132095),
+            _createPlace('Queenstown', -45.032700, 168.658000),
             _createPlace('Eilat', 29.557669, 34.951923)
         ]
         saveToStorage(PLACES_DB, gPlaces)
